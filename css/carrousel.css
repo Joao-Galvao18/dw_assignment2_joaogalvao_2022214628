@@ -1,0 +1,148 @@
+.carousel-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  will-change: transform;
+  padding: 0 2rem;
+  margin-top: 20px;
+}
+
+.carousel-item {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.text-block {
+  margin-top: 1rem;
+  transition: color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.text-block h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 0.3rem;
+}
+
+.text-block p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  max-width: 90%;
+  line-height: 1.4em;
+}
+
+.carousel-item:hover .image-wrapper img {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.carousel-item:hover .text-block {
+  color: var(--accent-color);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.carousel-track:hover .carousel-item:not(:hover) {
+  filter: brightness(0.4) blur(1px);
+  transform: scale(0.95);
+}
+
+.carousel-section .section-title-container {
+  position: absolute !important;
+  top: 9%;
+  left: 3%;
+  z-index: 10;
+  text-align: left !important;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .carousel-section .section-title-container {
+    top: 10%;
+    left: 3%;
+  }
+
+  .carousel-container {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-section .section-title-container {
+    top: 12%;
+    left: 3%;
+  }
+
+  .carousel-container {
+    margin-top: 80px;
+  }
+
+  .section-title,
+  #projects h2,
+  .featured-projects h2 {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle,
+  #projects p,
+  .featured-projects p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-section .section-title-container {
+    top: 10%;
+    left: -2%;
+  }
+
+  .carousel-container {
+    margin-top: 70px;
+  }
+}

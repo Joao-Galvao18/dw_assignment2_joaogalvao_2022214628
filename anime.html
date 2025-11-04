@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anime List | Future Website</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/anime.css">
+</head>
+
+<body>
+<header class="navbar" id="navbar">
+  <div class="navbar-container">
+    
+    <div class="logo-nav">
+      <a href="index.html" class="logo-link" aria-label="Logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="40" height="40">
+          <path d="M10 85 L50 15 L90 85 Z" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linejoin="round"/>
+          <line x1="30" y1="55" x2="70" y2="55" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linecap="round"/>
+        </svg>
+      </a>
+      
+      <nav class="nav-links desktop-only">
+        <a href="index.html">HOME</a>
+        <a href="anime.html">EXPLORE</a>
+        <a href="index.html#about" class="about-link">ABOUT</a>
+      </nav>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle desktop-only" aria-label="Toggle theme">
+      <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)">
+        <path d="M12 3.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V4a.75.75 0 0 1 .75-.75zm0 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75zM4.219 4.219a.75.75 0 1 1 1.061 1.061l-1.061-1.061zm14.5 14.5a.75.75 0 0 1 1.061 1.061l-1.061-1.061zm0-14.5 1.061 1.061a.75.75 0 0 1-1.061-1.061zm-14.5 14.5 1.061 1.061a.75.75 0 1 1-1.061-1.061zM12 6a6 6 0 1 1 0 12A6 6 0 0 1 12 6z"/>
+      </svg>
+    </button>
+
+    <button class="menu-toggle mobile-only" id="menuToggle" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="logo-link" aria-label="Logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="36" height="36">
+          <path d="M10 85 L50 15 L90 85 Z" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linejoin="round"/>
+          <line x1="30" y1="55" x2="70" y2="55" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linecap="round"/>
+        </svg>
+      </a>
+      <button id="closeMenu" class="close-menu" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="index.html">HOME</a>
+      <a href="anime.html">EXPLORE</a>
+      <a href="index.html#about" class="about-link">ABOUT</a>
+    </nav>
+
+    <button id="mobileThemeToggle" class="theme-toggle mobile-theme" aria-label="Toggle theme">
+      <svg id="mobileThemeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)">
+        <path d="M12 3.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V4a.75.75 0 0 1 .75-.75zm0 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75zM4.219 4.219a.75.75 0 1 1 1.061 1.061l-1.061-1.061zm14.5 14.5a.75.75 0 0 1 1.061 1.061l-1.061-1.061zm0-14.5 1.061 1.061a.75.75 0 0 1-1.061-1.061zm-14.5 14.5 1.061 1.061a.75.75 0 1 1-1.061-1.061zM12 6a6 6 0 1 1 0 12A6 6 0 0 1 12 6z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="top" class="anime-section">
+
+  <div class="section-title-container">
+    <div class="section-title fade-up" id="animeTitle">
+      <h2>EXPLORE ANIME</h2>
+      <p>Discover top trending shows from MyAnimeList</p>
+    </div>
+  </div>
+
+  <div class="anime-filters">
+    <div class="search-group">
+     <input type="text" id="searchInput" placeholder="Search anime..." />
+     <button id="searchBtn">Search</button>
+    </div>
+
+   <select id="genreSelect">
+     <option value="">All Genres</option>
+     <option value="1">Action</option>
+     <option value="2">Adventure</option>
+     <option value="4">Comedy</option>
+     <option value="8">Drama</option>
+     <option value="10">Fantasy</option>
+     <option value="14">Horror</option>
+     <option value="22">Romance</option>
+     <option value="24">Sci-Fi</option>
+   </select>
+
+   <button id="filterBtn">Filter</button>
+ </div>
+
+  <div id="animeList" class="anime-grid">
+    <p class="loading-text">Loading anime...</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html" class="logo-link" aria-label="Logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="36" height="36">
+          <path d="M10 85 L50 15 L90 85 Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="5"
+                stroke-linejoin="round" />
+          <line x1="30" y1="55" x2="70" y2="55"
+                stroke="currentColor"
+                stroke-width="5"
+                stroke-linecap="round" />
+        </svg>
+      </a>
+    </div>
+
+    <nav class="footer-links">
+      <a href="index.html">HOME</a>
+      <a href="index.html#carouselSection" class="featured-link">FEATURED ANIMES</a>
+      <a href="index.html#about" class="about-link">ABOUT</a>
+    </nav>
+
+    <button class="back-to-top" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <p class="footer-credit">© 2025 AnimeHub — Designed by GuiGox</p>
+</footer>
+
+  <script src="js/anime.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>

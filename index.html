@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Landing Page</title>
+
+<link rel="stylesheet" href="css/global.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/landingpage.css" />
+<link rel="stylesheet" href="css/carrousel.css" />
+<link rel="stylesheet" href="css/about.css" />
+</head>
+
+<body>
+<header class="navbar" id="navbar">
+  <div class="navbar-container">
+    
+    <div class="logo-nav">
+      <a href="index.html" class="logo-link" aria-label="Logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="40" height="40">
+          <path d="M10 85 L50 15 L90 85 Z" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linejoin="round"/>
+          <line x1="30" y1="55" x2="70" y2="55" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linecap="round"/>
+        </svg>
+      </a>
+      
+      <nav class="nav-links desktop-only">
+        <a href="index.html">HOME</a>
+        <a href="anime.html">EXPLORE</a>
+        <a href="#about">ABOUT</a>
+      </nav>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle desktop-only" aria-label="Toggle theme">
+      <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)">
+        <path d="M12 3.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V4a.75.75 0 0 1 .75-.75zm0 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75zM4.219 4.219a.75.75 0 1 1 1.061 1.061l-1.061-1.061zm14.5 14.5a.75.75 0 0 1 1.061 1.061l-1.061-1.061zm0-14.5 1.061 1.061a.75.75 0 0 1-1.061-1.061zm-14.5 14.5 1.061 1.061a.75.75 0 1 1-1.061-1.061zM12 6a6 6 0 1 1 0 12A6 6 0 0 1 12 6z"/>
+      </svg>
+    </button>
+
+    <button class="menu-toggle mobile-only" id="menuToggle" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="logo-link" aria-label="Logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="36" height="36">
+          <path d="M10 85 L50 15 L90 85 Z" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linejoin="round"/>
+          <line x1="30" y1="55" x2="70" y2="55" 
+                stroke="currentColor" 
+                stroke-width="5" 
+                stroke-linecap="round"/>
+        </svg>
+      </a>
+      <button id="closeMenu" class="close-menu" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="index.html">HOME</a>
+      <a href="anime.html">EXPLORE</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+
+    <button id="mobileThemeToggle" class="theme-toggle mobile-theme" aria-label="Toggle theme">
+      <svg id="mobileThemeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--text-color)">
+        <path d="M12 3.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V4a.75.75 0 0 1 .75-.75zm0 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75zM4.219 4.219a.75.75 0 1 1 1.061 1.061l-1.061-1.061zm14.5 14.5a.75.75 0 0 1 1.061 1.061l-1.061-1.061zm0-14.5 1.061 1.061a.75.75 0 0 1-1.061-1.061zm-14.5 14.5 1.061 1.061a.75.75 0 1 1-1.061-1.061zM12 6a6 6 0 1 1 0 12A6 6 0 0 1 12 6z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="video-container">
+
+  <video src="media/video1.mp4" class="active" muted playsinline></video>
+  <video src="media/video2.mp4" muted playsinline></video>
+  <video src="media/video3.mp4" muted playsinline></video>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <div class="fade-block text-group show" id="textFade">
+      <div class="title"></div>
+      <div class="subtitle"></div>
+    </div>
+    <a href="#" target="_blank" class="btn show" id="viewBtn">Watch trailer</a>
+  </div>
+
+  <div class="arrow-area left" id="prevArea" aria-label="Previous video">
+    <div class="arrow">&lt;</div>
+  </div>
+  <div class="arrow-area right" id="nextArea" aria-label="Next video">
+    <div class="arrow">&gt;</div>
+  </div>
+
+  <div class="controls">
+    <div class="progress-container" id="progressContainer"></div>
+  </div>
+
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span class="arrow-down">&#8595;</span>
+    <span>Scroll</span>
+    <span class="arrow-down">&#8595;</span>
+  </div>
+</div>
+
+<section class="carousel-section" id="carouselSection">
+
+  <div class="section-title-container">
+    <div class="section-title fade-up" id="carouselTitle">
+      <h2>FEATURED ANIMES</h2>
+      <p>A collection of the latest hits</p>
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="carousel-item">
+        <div class="image-wrapper">
+          <img src="media/image1.png" alt="Project 1">
+        </div>
+        <div class="text-block">
+          <h3>Chainsaw Man Reze Arc</h3>
+          <p>Denji faces Reze in a bloody clash of love and betrayal.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="image-wrapper">
+          <img src="media/image2.png" alt="Project 2">
+        </div>
+        <div class="text-block">
+          <h3>Demon Slayer Infinity Castle</h3>
+          <p>Tanjiro faces Muzan in a final battle within the Infinity Castle.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="image-wrapper">
+          <img src="media/image3.png" alt="Project 3">
+        </div>
+        <div class="text-block">
+          <h3>Jujutsu Kaisen Culling Games</h3>
+          <p>Sorcerers battle for survival in the deadly Culling Game.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="image-wrapper">
+          <img src="media/image4.png" alt="Project 4">
+        </div>
+        <div class="text-block">
+          <h3>My Hero Academia's final season</h3>
+          <p>The ultimate showdown between heroes and villains</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="image-wrapper">
+          <img src="media/image5.png" alt="Project 5">
+        </div>
+        <div class="text-block">
+          <h3>Frieren: Beyond Journey's End</h3>
+          <p>Frieren and her companions venture into untamed northern lands.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="section-title-container">
+    <div class="section-title fade-up" id="aboutTitle">
+      <h2>ABOUT</h2>
+      <p>Learn more about this project</p>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <div class="about-text">
+      <h3>A Cinematic Gateway to the Anime World</h3>
+      <p>
+        This website brings together the latest and greatest anime through a
+        cinematic interface. Powered by the <strong>Jikan API</strong>, it
+        dynamically fetches real-time data from MyAnimeList so you can discover
+        the shows that are trending and explore by genres.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="media/image6.jpeg" alt="About the project" />
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html" class="logo-link" aria-label="Logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="36" height="36">
+          <path d="M10 85 L50 15 L90 85 Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="5"
+                stroke-linejoin="round" />
+          <line x1="30" y1="55" x2="70" y2="55"
+                stroke="currentColor"
+                stroke-width="5"
+                stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="footer-links">
+      <a href="index.html">HOME</a>
+      <a href="index.html#carouselSection" class="featured-link">FEATURED ANIMES</a>
+      <a href="index.html#about" class="about-link">ABOUT</a>
+    </nav>
+
+    <button class="back-to-top" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <p class="footer-credit">2025 AnimeHub — Made by João Galvão</p>
+</footer>
+
+<script src="js/landingpage.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/carrousel.js"></script>
+</body>
+</html>
