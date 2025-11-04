@@ -8,7 +8,7 @@ dynamically fetches real-time data from MyAnimeList so you can discover
 the shows that are trending and explore by genres.
 
 ## Live Demo
-[View on GitHub Pages](https://yourusername.github.io/animeverse/)
+[View on GitHub Pages](https://joao-galvao18.github.io/dw_assignment2_joaogalvao_2022214628/)
 
 ## Features
 - Cinematic landing page with looping videos
