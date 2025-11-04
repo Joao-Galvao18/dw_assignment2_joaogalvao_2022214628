@@ -101,7 +101,12 @@ document.querySelectorAll('.mobile-nav-links a').forEach(link => {
 
 // LANDING SECTION NAVBAR BEHAVIOR
 const videoContainer = document.querySelector('.video-container');
-const isIndexPage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+
+const currentPath = window.location.pathname;
+const isIndexPage =
+  currentPath.endsWith('/') ||
+  currentPath.endsWith('index.html') ||
+  currentPath.includes('dw_assignment2_joaogalvao_2022214628');
 
 function updateNavbarLandingState() {
   if (isIndexPage && videoContainer) {
@@ -123,7 +128,8 @@ function updateNavbarLandingState() {
 
 window.addEventListener('scroll', updateNavbarLandingState);
 window.addEventListener('load', updateNavbarLandingState);
-updateNavbarLandingState();
+
+setTimeout(updateNavbarLandingState, 300);
 
 // UNIVERSAL TITLE REVEAL FUNCTION
 function revealOnScroll(elementId, threshold = 0.85) {

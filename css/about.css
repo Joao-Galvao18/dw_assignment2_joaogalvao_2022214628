@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 6rem 8%;
+  padding-top: 1rem;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
